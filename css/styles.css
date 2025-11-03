@@ -1,0 +1,215 @@
+/* ---------------------------------- */
+/* 1. Variables de Color (Negro y Verde) */
+/* ---------------------------------- */
+:root {
+    /* Fondo principal: Negro profundo para un look tecnológico */
+    --color-background: #121212;
+    /* Fondo secundario: Un gris oscuro para las secciones/tarjetas */
+    --color-secondary-bg: #1e1e1e; 
+    /* Color de acento: Verde neón/brillante */
+    --color-accent: #00ff99; 
+    /* Color de texto principal: Blanco o gris muy claro */
+    --color-text-primary: #ffffff; 
+    /* Color de texto secundario (párrafos, descripciones) */
+    --color-text-secondary: #b0b0b0; 
+    /* Sombra ligera para pop-up */
+    --shadow-color: rgba(0, 255, 153, 0.2); 
+
+    /* Definición de la fuente para mejor legibilidad */
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ---------------------------------- */
+/* 2. Reseteo y Estilos Base */
+/* ---------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* Base para un buen diseño responsive */
+    font-size: 16px; 
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    font-family: var(--font-family);
+    line-height: 1.6;
+}
+
+/* Estilos de encabezados */
+h1, h2, h3 {
+    color: var(--color-accent); /* Los títulos en verde para contraste */
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--color-text-primary);
+}
+
+/* ---------------------------------- */
+/* 3. Estilos de Secciones y Contenedores */
+/* ---------------------------------- */
+.section {
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ---------------------------------- */
+/* 4. Estilos para la Llamada a la Acción (CTA) */
+/* ---------------------------------- */
+.btn-cta {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: var(--color-background); /* Texto oscuro sobre el verde */
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.btn-cta:hover {
+    background-color: var(--color-accent); 
+    opacity: 0.9;
+    transform: translateY(-2px); /* Pequeño efecto dinámico */
+}
+
+/* ---------------------------------- */
+/* 5. Diseño Responsive Básico (MOBILE-FIRST) */
+/* ---------------------------------- */
+/* Esto asegura que la página se vea correctamente en todos los tamaños de dispositivo */
+
+/* Para Tabletas (600px en adelante) */
+@media (min-width: 600px) {
+    .section {
+        padding: 60px 3%;
+    }
+}
+
+/* Para Escritorios (1024px en adelante) */
+@media (min-width: 1024px) {
+    .section {
+        padding: 100px 0;
+    }
+    .hero-content {
+        /* Ejemplo: Aumentar el tamaño del texto principal en pantallas grandes */
+        max-width: 70%; 
+    }
+}
+
+/* ---------------------------------- */
+/* 6. Estilo del Footer */
+/* ---------------------------------- */
+.footer {
+    background-color: var(--color-secondary-bg);
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid var(--color-secondary-bg);
+}
+
+.contact-links a {
+    margin: 0 15px;
+    font-size: 1.1em;
+}
+/* Estilos para el grid de habilidades */
+.skills-grid {
+    display: grid;
+    gap: 30px;
+    /* En móvil, una columna; en escritorio, tres columnas */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    margin-top: 20px;
+}
+
+.skill-category {
+    background-color: var(--color-secondary-bg);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 3px solid var(--color-accent);
+}
+
+.skill-category h3 {
+    margin-bottom: 15px;
+    color: var(--color-text-primary);
+}
+
+.skill-category ul {
+    list-style: none;
+}
+
+.skill-category ul li {
+    padding: 8px 0;
+    color: var(--color-text-secondary);
+}
+
+.skill-category ul li i {
+    color: var(--color-accent); /* Iconos en verde */
+    margin-right: 10px;
+    width: 20px;
+}
+/* Estilos para el contenedor de proyectos */
+.projects-container {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive */
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: var(--color-secondary-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px; /* Altura fija para uniformidad */
+    object-fit: cover;
+}
+
+.project-details {
+    padding: 20px;
+}
+
+.tech-used {
+    margin: 15px 0;
+}
+p {
+   text-align: justify;
+}
+.tech-tag {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: var(--color-background);
+    font-size: 0.75em;
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+.project-links a {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: 600;
+}
