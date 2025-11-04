@@ -112,7 +112,7 @@ p {
 /* 3. Estilos de Secciones y Contenedores */
 .section {
     /* Espaciado vertical reducido a 30px (Mobile-First) */
-    padding: 30px 5%; 
+    padding: 10px 5%; 
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -121,8 +121,8 @@ p {
 .hero-section {
     background: linear-gradient(180deg, #121212 0%, #151515 100%);
     /* Espaciado reducido a 30px */
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
     /* CENTRADO FLEXBOX */
     display: flex;
     justify-content: center; 
@@ -147,7 +147,7 @@ p {
     /* GRADIENTE para el botón */
     background: linear-gradient(45deg, var(--color-accent), var(--color-dark-accent));
     color: var(--color-background); 
-    padding: 10px 25px;
+    padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
     text-transform: uppercase;
@@ -175,7 +175,7 @@ p {
 
 .skill-category {
     background-color: var(--color-secondary-bg);
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
     border-left: 3px solid var(--color-accent); 
     /* SOMBREADO NEON en la tarjeta */
@@ -238,7 +238,7 @@ p {
 }
 
 .project-details {
-    padding: 20px;
+    padding: 10px;
 }
 
 .tech-used {
@@ -268,7 +268,7 @@ p {
 /* Para Tabletas (600px en adelante) */
 @media (min-width: 600px) {
     .section {
-        padding: 60px 3%;
+        padding: 30px 3%;
     }
 }
 
@@ -276,7 +276,7 @@ p {
 @media (min-width: 1024px) {
     .section {
         /* Espaciado de escritorio reducido a 80px */
-        padding: 80px 0; 
+        padding: 40px 0; 
     }
     .hero-content {
         max-width: 70%; 
